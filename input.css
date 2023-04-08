@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+    font-family: 'Bai Jamjuree', sans-serif;
+    background-image:url("../images/bg-header-desktop.png");
+    background-repeat:no-repeat;
+    background-size:contain;
+}
+
+@media (max-width: 568px){
+    body{
+        background-image:url("../images/bg-header-mobile.png");    
+    }
+   
+}
+@layer base {
+    h3{
+        @apply max-w-6xl text-center text-4xl md:text-5xl font-bold text-gray-600 mb-8 ;
+    }
+    p{
+       @apply max-w-3xl mx-auto  space-y-12 text-center  text-gray-400;
+    }
+    h1{
+        @apply text-2xl font-bold text-gray-600 mb-2;
+    }
+    .superChange-item img{
+        @apply hover:scale-105 duration-150;
+    }
+    footer a{
+    @apply hover:text-cyan-600;
+    }
+    .footer-column{
+    @apply flex flex-col py-4 space-y-4;
+     }
+}
+.button{
+    @apply text-center rounded-full px-8 py-4 text-white text-xl shadow-lg shadow-gray-500 duration-100  hover:opacity-90;
+}
+.button-container{
+    @apply flex flex-col md:flex-row  md:space-y-0 md:space-x-4 justify-center mx-auto space-y-8;
+}
+.section-container{
+    @apply max-w-6xl mx-auto justify-center items-center;
+}
+.section-snippets{
+    @apply text-center md:text-left  md:mx-auto ;
+}
+.snippets-p{
+    @apply text-xl leading-7 mb-10 md:text-left mx-auto max-w-sm;
+}
+.superChange{
+    @apply flex flex-col md:flex-row md:space-x-8;
+}
+.superChange-item{
+    @apply space-y-4 mx-auto px-6 p-8 max-w-lg;
+}
+.clients{
+  @apply flex flex-col justify-between items-center md:flex-row  my-20 space-y-20 max-w-6xl  mx-auto  space-x-10 md:space-y-0;
+}
+.footer{
+ @apply flex flex-col md:flex-row items-center text-center justify-between  bg-gray-100  text-gray-400 mx-auto md:text-left py-8 ;
+}
+.ficon:hover{
+  filter: invert(53%) sepia(68%) saturate(434%) hue-rotate(121deg) brightness(101%) contrast(94%) ;
+  /*@apply hover:bg-cyan-600;*/
+}
